@@ -1,5 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import _ from 'lodash';
 import './style.css';
+/* eslint-enable import/no-extraneous-dependencies */
 
 function component() {
   const element = document.createElement('div');
