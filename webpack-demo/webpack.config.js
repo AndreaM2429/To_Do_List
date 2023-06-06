@@ -1,7 +1,6 @@
 const path = require('path');
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-unresolved */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-/* eslint-enable import/no-extraneous-dependencies */
 
 module.exports = {
   mode: 'development',
