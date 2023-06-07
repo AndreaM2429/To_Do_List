@@ -177,7 +177,9 @@ You can deploy this project Following the instructions in this [link](https://pa
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **I won't implement any other change in this project until I recive a review**
+- [ ] **Add functions to add and remove a task**
+- [ ] **Add a function to delete all the complete tasks**
+- [ ] **Add evenst to move the list elements**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
