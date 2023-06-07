@@ -51,11 +51,11 @@ const tableTask = () => {
   const divlist = document.createElement('div');
   divlist.className = 'conteiner';
 
-  const title = document.createElement('div');
-  title.className = 'flexrow pading';
-  title.innerHTML = `
-    <h1>Today's To Do</h1> <img src="${refresh}" alt="refresh" class="img">
-  `;
+  const title = document.getElementById('containertitle');
+  const titleimg = document.createElement('img');
+  titleimg.src = refresh;
+  titleimg.className = 'img';
+  title.appendChild(titleimg);
 
   const addinput = document.createElement('input');
   addinput.placeholder = 'Add to your list...';
