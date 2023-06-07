@@ -82,9 +82,7 @@
 
 ## Live demo <a name="live-demo"></a> 
 
-> There is the link where you can see my deployed project
-
-- [To Do List](https://andream2429.github.io/Capstone_project_Conference_page/)
+> In this project due to the webpack local dev server you can see it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
