@@ -8,7 +8,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -77,12 +76,9 @@
 
 - **Single page**
 - **Simple interface**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Live demo <a name="live-demo"></a> 
-
-> In this project due to the webpack local dev server you can see it.
+- **Add and remove task function**
+- **Mark task as completed and deleted all completed**
+- **Data saved in LocalStorage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +155,7 @@ To see the linter errors run the following codes for:
 
 ### Deployment
 
-You can deploy this project Following the instructions in this [link](https://pages.github.com/)
+To deploy this project by someone who isn't the owner is prohibit.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
