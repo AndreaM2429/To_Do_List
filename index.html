@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+  <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
+  <body>
+    <div id="container" class="flexrow content">
+      <div class="conteiner">
+        <div id="containertitle" class="flexrow pading">
+          <h1>Today's To Do</h1>
+          <button class="bimg addone">&#10226;</button>
+        </div>
+        <div class="flexrow pading">
+          <form class="flexrow">
+            <input placeholder="Add to your list..." class="text inpadd" required>
+            <button class="bimg addone" type="submit">&#8617;</button>
+          </form>
+        </div>
+        <div class="contain--tasks"></div>
+        <button class="butgeneral drop">Clear all completed</button>
+      </div>
+    </div>
+  </body>
+</html>
