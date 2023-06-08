@@ -60,13 +60,10 @@ export default class Taks {
       labelTask.addEventListener('focusout', () => {
         taskli.style.backgroundColor = 'rgb(255, 243, 227)';
         editone(this.tasks, index, labelTask.value, this.saveTask);
-        console.log('Tasks edits', this.tasks);
       });
     });
 
     div.appendChild(ul);
-
-    // div.appendChild(buttonClear);
   }
 
   deleteTask = (index) => {
@@ -77,13 +74,10 @@ export default class Taks {
     const localstorageTasks = localStorage.getItem(this.name);
     if (localstorageTasks) {
       this.tasks = JSON.parse(localstorageTasks);
-      console.log('loadTaks', this.tasks);
-      this.tableTask(); // display
     }
   }
 
   saveTask = () => {
     localStorage.setItem(this.name, JSON.stringify(this.tasks));
-    console.log('Storage', localStorage);
   }
 }
