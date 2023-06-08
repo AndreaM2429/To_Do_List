@@ -2,10 +2,13 @@ import trash from '../trash.png';
 import addTask from './add_task.js';
 import removeTask from './remove_task.js';
 import editTask from './edit_task.js';
+import markComplete, { deleteComplete } from './complete_task.js';
 
 const add = addTask;
 const removeone = removeTask;
 const editone = editTask;
+const complete = markComplete;
+const dropComplete = deleteComplete;
 
 export default class Taks {
   static init() {
@@ -32,6 +35,7 @@ export default class Taks {
 
   tableTask = () => {
     const div = document.querySelector('.contain--tasks');
+    const buttondrop = document.querySelector('.drop');
 
     const ul = document.createElement('ul');
     div.innerHTML = '';
@@ -51,6 +55,12 @@ export default class Taks {
       taskli.appendChild(labelTask);
       taskli.appendChild(imgtrash);
 
+      if (elem.completed === false) {
+        inputTask.checked = false;
+      } else {
+        inputTask.checked = true;
+      }
+
       ul.appendChild(taskli);
       imgtrash.addEventListener('click', () => {
         this.deleteTask(index);
@@ -62,14 +72,32 @@ export default class Taks {
         taskli.style.backgroundColor = 'rgb(255, 243, 227)';
         editone(this.tasks, index, labelTask.value, this.saveTask);
       });
+      inputTask.addEventListener('change', () => {
+        this.completeTask(index);
+      });
     });
 
     div.appendChild(ul);
+    buttondrop.addEventListener('click', () => {
+      this.dropTaskComplete(this.saveTask, this.loadTasks);
+    });
   }
 
   deleteTask = (index) => {
     removeone(this.tasks, index, this.saveTask, this.loadTasks);
     this.tableTask();
+  }
+
+  dropTaskComplete = (save, load) => {
+    const updateTask = dropComplete(this.tasks);
+    this.tasks = updateTask;
+    save();
+    load();
+    this.tableTask();
+  }
+
+  completeTask = (index) => {
+    complete(this.tasks, index, this.saveTask, this.loadTasks);
   }
 
   loadTasks = () => {
