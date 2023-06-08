@@ -8,6 +8,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -81,6 +82,14 @@
 - **Data saved in LocalStorage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Live Demo <a name="live-demo"></a>
+
+[Here](https://andream2429.github.io/To_Do_List/) you can see and test the app.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
