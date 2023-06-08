@@ -7,8 +7,21 @@
   <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
   <body>
     <div id="container" class="flexrow content">
-      <div id="containertitle" class="flexrow pading">
-        <h1>Today's To Do</h1>
+      <div class="conteiner">
+        <div id="containertitle" class="flexrow pading">
+          <h1>Today's To Do</h1>
+          &#8617;
+        </div>
+        <div class="flexrow pading">
+          <form class="flexrow">
+            <input placeholder="Add to your list..." class="text inpadd" required>
+            <button class="bimg addone" type="submit">
+              <img src="http://localhost:8081/4ea9e05f8915b7bd29f8.png" class="img">
+            </button>
+          </form>
+        </div>
+        <div class="contain--tasks"></div>
+        <button class="butgeneral">Clear all completed</button>
       </div>
     </div>
   </body>
