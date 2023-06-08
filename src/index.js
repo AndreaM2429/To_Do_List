@@ -1,10 +1,15 @@
 import './style.css';
-import points from './select.png';
+import Taks from './Modules/main_class.js';
+
+Taks.init();
+
+/* import points from './select.png';
 import arrow from './arrow.png';
 import refresh from './refresh.png';
+import addTask from './add_task.js';
 
-const tasks = [
-  {
+let tasks = [
+ {
     description: 'Set up HTML, CSS and JS linters',
     completed: true,
     index: 0,
@@ -26,7 +31,9 @@ const tasks = [
   },
 ];
 
-const div = document.getElementById('container');
+const name = 'ListTasks';
+// const div = document.getElementById('container');
+
 const listTask = () => {
   const ul = document.createElement('ul');
 
@@ -35,11 +42,13 @@ const listTask = () => {
     task.className = 'flexrow pading';
     if (elem.completed === true) {
       task.innerHTML = `
-      <input type="checkbox" checked class="${elem.index}"><label class="flexrow">${elem.description}</label><img src="${points}" alt="select" class="imgselect img">
+      <input type="checkbox" checked class="${elem.index}"><label class="flexrow">
+      ${elem.description}</label><img src="${points}" alt="select" class="imgselect img">
       `;
     } else {
       task.innerHTML = `
-    <input type="checkbox" class="${elem.index}"><label class="flexrow">${elem.description}</label><img src="${points}" alt="select" class="imgselect img">
+    <input type="checkbox" class="${elem.index}"><label class="flexrow">
+    ${elem.description}</label><img src="${points}" alt="select" class="imgselect img">
       `;
     }
     ul.appendChild(task);
@@ -79,4 +88,19 @@ const tableTask = () => {
   return divlist;
 };
 
-div.appendChild(tableTask());
+// div.appendChild(tableTask());
+
+const save = () => {
+  localStorage.setItem(name, JSON.stringify(tasks));
+};
+
+const load = () => {
+  const localstorageTasks = localStorage.getItem(name);
+  if (localStorage) {
+    tasks = JSON.parse(localstorageTasks);
+    tableTask(); // display
+  }
+};
+
+addTask(tasks, save, load);
+*/
